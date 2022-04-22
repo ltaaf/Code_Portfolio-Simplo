@@ -1,8 +1,7 @@
-/* Importation de police Google  */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
 /* Declaration des valeurs par defaut; */
 /* Selection de l'élément racine (<html>) avec :root */
+
 :root {
   --header-height: 3rem;
   --font-semi: 600;
@@ -10,7 +9,6 @@
   --couleur1: hsl(var(--hue-color), 89%, 60%);
   --couleur1: red;
   --couleur2: hsl(var(--hue-color), 56%, 12%);
-  --body-font: 'Poppins', sans-serif;
   --big-font-size: 2rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: .938rem;
@@ -22,7 +20,10 @@
   --z-back: -10;
   --z-fixed: 100;
 }
-
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("/font/Poppins-Regular.ttf");
+}
 
 @media screen and (min-width: 968px) {
   :root {
@@ -44,9 +45,10 @@ html {
   scroll-behavior: auto;
 }
 
+
 body {
   margin: var(--header-height) 0 0 0;
-  font-family: var(--body-font);
+  font-family: Poppins, serif;
   font-size: var(--normal-font-size);
   color: var(--couleur2);
 }
@@ -288,6 +290,8 @@ img {
 }
 .competences__img:hover{
   background-color: yellow;
+  transform: scale(1.1);
+  transition: 15s;
   border-radius: 70%;
 }
 
@@ -396,6 +400,9 @@ img {
   font-size: var(--normal-font-size);
   cursor: pointer;
   margin-left: auto;
+}
+.contact__button:hover{
+  background-color: blue;
 }
 
 /* Pied de Page*/
